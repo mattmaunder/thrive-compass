@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0f2847;
+  --color-teal: #00bfa6;
+  --color-muted: #717182;
+  --color-surface: #fafafa;
+  --color-border: rgba(15, 40, 71, 0.08);
+  --color-warning: #ffb800;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-navy);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background-image: linear-gradient(
+      90deg,
+      rgb(15, 40, 71) 0%,
+      rgb(16, 50, 78) 7.14%,
+      rgb(17, 60, 84) 14.29%,
+      rgb(18, 70, 91) 21.43%,
+      rgb(18, 80, 98) 28.57%,
+      rgb(19, 91, 105) 35.71%,
+      rgb(19, 101, 111) 42.86%,
+      rgb(18, 112, 118) 50%,
+      rgb(18, 123, 125) 57.14%,
+      rgb(17, 134, 132) 64.29%,
+      rgb(15, 145, 139) 71.43%,
+      rgb(13, 156, 145) 78.57%,
+      rgb(9, 168, 152) 85.71%,
+      rgb(5, 179, 159) 92.86%,
+      rgb(0, 191, 166) 100%
+    );
+  }
+
+  .gradient-login-bg {
+    background-image: linear-gradient(
+      150.45deg,
+      rgb(15, 40, 71) 0%,
+      rgb(15, 43, 75) 7.14%,
+      rgb(14, 46, 79) 14.29%,
+      rgb(14, 49, 82) 21.43%,
+      rgb(13, 52, 86) 28.57%,
+      rgb(12, 55, 90) 35.71%,
+      rgb(11, 58, 94) 42.86%,
+      rgb(10, 61, 98) 50%,
+      rgb(9, 79, 108) 57.14%,
+      rgb(7, 96, 118) 64.29%,
+      rgb(6, 115, 128) 71.43%,
+      rgb(4, 133, 138) 78.57%,
+      rgb(3, 152, 147) 85.71%,
+      rgb(1, 171, 157) 92.86%,
+      rgb(0, 191, 166) 100%
+    );
+  }
+
+  .gradient-teal-card {
+    background-image: linear-gradient(
+      90deg,
+      rgb(0, 191, 166) 0%,
+      rgb(0, 188, 163) 11.11%,
+      rgb(0, 185, 160) 22.22%,
+      rgb(0, 182, 157) 33.33%,
+      rgb(0, 179, 154) 44.44%,
+      rgb(0, 176, 151) 55.56%,
+      rgb(0, 174, 149) 66.67%,
+      rgb(0, 171, 146) 77.78%,
+      rgb(0, 168, 143) 88.89%,
+      rgb(0, 165, 140) 100%
+    );
+  }
+}
