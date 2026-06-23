@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "types": ["@figma/code-connect/figma-types"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["./**/*.figma.ts", "./**/*.figma.tsx"],
+  "exclude": []
+}

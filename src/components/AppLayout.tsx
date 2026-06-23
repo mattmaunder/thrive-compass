@@ -44,7 +44,7 @@ export function AppLayout() {
           >
             <img src={THRIVE_LOGO} alt="Thrive Bank" className="h-8 w-auto" />
             <span className="h-6 w-px bg-[var(--color-border)]" />
-            <span className="text-xs text-muted">Compass for Couples</span>
+            <span className="text-xs text-muted">Compass</span>
           </button>
 
           <nav className="flex items-center gap-1">

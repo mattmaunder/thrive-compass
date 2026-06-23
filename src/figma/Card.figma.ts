@@ -1,4 +1,4 @@
-// url=https://www.figma.com/design/efo2UYBzjOvMRZuP4IWLM6?node-id=12-5
+// url=https://www.figma.com/design/CSjIzW3dHezzZOMyZKqIof/Thrive-Bank--Design-System-?node-id=9-36
 // source=src/components/ui/Card.tsx
 // component=Card
 import figma from 'figma'

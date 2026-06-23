@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
+  ArrowUpRight,
   ChevronRight,
   Coins,
   Home,
@@ -282,7 +283,7 @@ export function DashboardPage() {
             return (
               <div
                 key={`${tx.name}-${tx.date}`}
-                className="flex items-center justify-between rounded-xl bg-[rgba(236,236,240,0.3)] p-3"
+                className={`flex items-center justify-between rounded-xl p-3 ${isIncome ? 'border-l-4 border-teal bg-teal/10' : 'bg-[rgba(236,236,240,0.3)]'}`}
               >
                 <div>
                   <p className="text-base text-navy">{tx.name}</p>
@@ -293,9 +294,12 @@ export function DashboardPage() {
                     </span>
                   </div>
                 </div>
-                <p className={`text-base ${isIncome ? 'text-teal' : 'text-navy'}`}>
-                  {isIncome ? '+' : ''}£{Math.abs(tx.amount).toLocaleString('en-GB', { minimumFractionDigits: tx.amount % 1 ? 2 : 0 })}
-                </p>
+                <div className="flex items-center gap-1">
+                  {isIncome && <ArrowUpRight className="size-4 text-teal" />}
+                  <p className={`text-base ${isIncome ? 'font-medium text-teal' : 'text-navy'}`}>
+                    {isIncome ? '+' : ''}£{Math.abs(tx.amount).toLocaleString('en-GB', { minimumFractionDigits: tx.amount % 1 ? 2 : 0 })}
+                  </p>
+                </div>
               </div>
             )
           })}

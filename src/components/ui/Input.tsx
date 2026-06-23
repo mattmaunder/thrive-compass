@@ -1,24 +1,23 @@
+import { FormField } from './FormField'
+
 type InputProps = {
   label: string
   placeholder?: string
   id?: string
   type?: string
+  hint?: string
 }
 
-export function Input({ label, placeholder, id, type = 'text' }: InputProps) {
-  const inputId = id ?? label.toLowerCase().replace(/\s+/g, '-')
+export function Input({ label, placeholder, id, type = 'text', hint }: InputProps) {
+  const fieldType = type === 'email' ? 'email' : type === 'password' ? 'password' : 'text'
 
   return (
-    <div>
-      <label htmlFor={inputId} className="text-sm font-medium text-navy">
-        {label}
-      </label>
-      <input
-        id={inputId}
-        type={type}
-        placeholder={placeholder}
-        className="mt-2 w-full rounded-xl border border-[var(--color-border)] bg-surface px-3 py-3 text-base text-navy placeholder:text-navy/50 outline-none focus:border-teal"
-      />
-    </div>
+    <FormField
+      label={label}
+      type={fieldType}
+      id={id}
+      placeholder={placeholder}
+      hint={hint}
+    />
   )
 }

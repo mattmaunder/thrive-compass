@@ -1,4 +1,4 @@
-// url=https://www.figma.com/design/efo2UYBzjOvMRZuP4IWLM6?node-id=13-6
+// url=https://www.figma.com/design/CSjIzW3dHezzZOMyZKqIof/Thrive-Bank--Design-System-?node-id=9-40
 // source=src/components/ui/NavLink.tsx
 // component=NavLink
 import figma from 'figma'
